@@ -1,4 +1,7 @@
 const form = document.querySelector("#contactForm");
+const copyUrlButton = document.querySelector("#copyUrlButton");
+const copyStatus = document.querySelector("#copyStatus");
+const publicUrl = "https://alicetel-u.github.io/SHIRAISHI-STUDIO/";
 
 form?.addEventListener("submit", (event) => {
   event.preventDefault();
@@ -20,4 +23,17 @@ form?.addEventListener("submit", (event) => {
   ].join("\n");
 
   window.location.href = `mailto:freelance@example.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+});
+
+copyUrlButton?.addEventListener("click", async () => {
+  try {
+    await navigator.clipboard.writeText(publicUrl);
+    if (copyStatus) {
+      copyStatus.textContent = "URLをコピーしました。";
+    }
+  } catch {
+    if (copyStatus) {
+      copyStatus.textContent = publicUrl;
+    }
+  }
 });

@@ -443,6 +443,69 @@ h3 {
   color: rgba(20, 33, 58, 0.72);
 }
 
+.share-section {
+  background:
+    radial-gradient(circle at 10% 18%, rgba(23, 127, 143, 0.16) 0 120px, transparent 121px),
+    radial-gradient(circle at 92% 78%, rgba(240, 20, 87, 0.12) 0 150px, transparent 151px),
+    var(--paper);
+}
+
+.share-layout {
+  display: grid;
+  grid-template-columns: minmax(280px, 1fr) minmax(280px, 360px);
+  gap: clamp(28px, 6vw, 76px);
+  align-items: center;
+}
+
+.share-layout p {
+  color: rgba(20, 33, 58, 0.72);
+  font-size: 18px;
+}
+
+.share-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 28px;
+}
+
+.copy-status {
+  min-height: 28px;
+  margin: 14px 0 0;
+  color: var(--teal);
+  font-size: 14px;
+  font-weight: 900;
+}
+
+.qr-panel {
+  display: grid;
+  gap: 16px;
+  justify-items: center;
+  padding: 22px;
+  background: var(--cream);
+  border: 3px solid var(--navy);
+  border-radius: 8px;
+  box-shadow: 8px 8px 0 var(--gold);
+}
+
+.qr-panel img {
+  width: min(100%, 280px);
+  aspect-ratio: 1;
+  border: 2px solid rgba(7, 22, 47, 0.16);
+  border-radius: 8px;
+}
+
+.qr-panel code {
+  max-width: 100%;
+  padding: 8px 10px;
+  color: var(--navy);
+  background: rgba(255, 255, 255, 0.72);
+  border-radius: 8px;
+  font-size: 12px;
+  line-height: 1.5;
+  overflow-wrap: anywhere;
+}
+
 .contact-section {
   color: var(--cream);
   background:
@@ -538,7 +601,8 @@ a:focus-visible {
 
   .message-layout,
   .split,
-  .contact-layout {
+  .contact-layout,
+  .share-layout {
     grid-template-columns: 1fr;
   }
 
