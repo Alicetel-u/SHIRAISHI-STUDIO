@@ -389,6 +389,14 @@ h3 {
   margin-bottom: 34px;
 }
 
+#works-title {
+  white-space: nowrap;
+}
+
+#works .section-heading {
+  max-width: 980px;
+}
+
 .section-heading p {
   color: rgba(20, 33, 58, 0.72);
 }
@@ -944,6 +952,10 @@ a:focus-visible {
 
   h1 {
     font-size: 34px;
+  }
+
+  #works-title {
+    white-space: normal;
   }
 
   .message-body p,
