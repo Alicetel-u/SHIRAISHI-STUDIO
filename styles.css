@@ -929,7 +929,7 @@ a:focus-visible {
     min-height: 260px;
     max-height: none;
     aspect-ratio: 16 / 10;
-    object-position: 62% center;
+    object-position: 54% center;
   }
 
   .hero-orbit {
